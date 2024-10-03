@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WallMart UltraKill</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="CSS/ProjectenStyle.css">
+
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+
+</head>
+<body a link="White" vlink="White">
+    <div id="Header">
+        <div class="Container">
+            <nav>
+                <a href="Projects.html" class="projectsLogo"><i class="fas fa-backspace"></i>Go Back</a>
+            </nav>
+        </div>
+    </div>
+
+<!-----Main----->
+
+    <main>
+        <article>
+            <h1>wallmart UltraKill</h1>
+            <figure>
+                <div class="video-container">
+                    <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/C2dosmB-PzQ?si=rbmq0STwjndpACEW&autoplay=1&mute=1" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <figcaption class="figcaptionC">
+                    Our game for school
+                </figcaption>
+            </figure>
+
+            <h2>
+                What is this project about?
+            </h2>
+            <p>
+                this is a first person shooter game. we had to make this game in the 2nd period of the 2nd year, the period was called Vertical slice. 
+                we had to recreate part of a game. 
+                the teachers showed us a 10 second video of the game we had to recreate and we had to recreate it exactly like the 10 seconds that they showed us.
+
+                <br><br>
+                Project date: From November 2023 - February 2024 
+                <br><br>
+                Project duration: 2 months.
+                <br><br>
+                Development Team: 7 people.
+                <br><br>
+                Engine: Unity engine
+                <br><br>
+                Programming language: C#
+            </p>
+            
+            <img  class="BAMbg"  src="Images/Schermafbeelding 2024-03-27 124746.png" alt="WallMart UltraKill">
+
+            <h2>
+                My role & contribution in this project.
+            </h2>
+            <p class="flexP">
+                I was a programmer for this project, my role was to create mechanics for our game. I made the StartScreen and PauseScreen <Area></Area>.
+            </p>
+
+            <div class="container">
+                <div class="img-col">
+                    <img  class="BAMbg"  src="Images/VisualSheetUltraKill.png" alt="torso player">
+                    <br><br><br><br>
+                    <figcaption>
+                        The visual sheet from the Startscreen 
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                as you can see in the Visual Sheet this is the code for the elevator in the back of the start screen i used A loop to make sure that it will look 
+                like the elvator is dropping down. for the loop i made a big tube that just spawns back to the start after it comes to the end.
+            </p>
+            <img class="imgPJ" src="Images/Elevator code.png">
+            <br><br><br><br>
+            <div class="container">
+                <div class="img-col">
+                    <figcaption>
+                        This is the Elevator code from close by
+                    </figcaption>
+                </div>
+            </div>
+            <p class="flexP">
+                This is the whole code of the elevator in the back of the start screen.
+                 i used a specific amout of speed it would look like you fell down really fast to the ground and so you would not see the next elevator tube spawning,
+                 cause that is what happend in the beginning you would see when the next elevator tube would spawn.
+                 And that something you do not want to see in the game ofcourse.
+                 <br><br>
+                And there will always be a precisely placed spawnpoint for the next tube so it would not look weird. 
+                And ofcourse there is also a destroy point so the next tube could actually spawn and you would not have stacked up tubes in the game so it would not lag or crash the game.
+            </p>
+            <br><br><br><br>
+            <div class="container">
+                <div class="img-col">
+                    <img height="600" class="imgPJ" src="Images/Schermafbeelding 2024-04-03 135946.png">
+                    <figcaption>
+                        This is the PauseScreen
+                    </figcaption>
+                    <br><br><br><br>
+                    <img class="imgPJ" src="Images/UltraKillPauseScreen.png">
+                    <figcaption>
+                        the PauseScreen <code></code>
+                    </figcaption>
+                </div>
+               
+            </div>
+            <p class="flexP">
+                This is the code for the Pause screen. As you can see in the code, 
+                you have 3 different parts that help with pausing the game. 
+                You have the GameObject called PauseScreenUI that is a canvas, aka the pause screen, that you can see in the picture before.
+                <br><br>
+                And then you have the Void Update; in there, I make sure you can use the Escape button to open and close the Pause screen. 
+                You have the Public Void Resume; in there, I make sure the cursor is gone from the screen when you play the game. And with the Void Pause, 
+                I make sure the cursor is back and you can click the buttons on the screen.
+                <br><br>
+                The buttons.
+                <br><br>
+                If you wanna use the RestartButton, you have to use the code Resume at the same time as the SceneManager. 
+                With the SceneManager, I make sure you go back to the start of the game so you can redo the level.
+                 And then you have the Public Void BackToMainScene() that just makes sure that if you press the Resume button, you can continue playing the game.
+            </p>
+        </article>
+    </main>
+
+    <a class="Top" href="#Header">Top</a>
+    <footer>
+        <p>
+            Delysha Orsel
+            <br>
+            Spotyorsel@gmail.com | 34533@ma-web.nl <i class="fas fa-envelope"></i>
+            <br>
+            <a href="https://github.com/Delysha?tab=repositories">Github <i class="fab fa-github-square"></i></a>
+            <br>
+            <a href="https://www.linkedin.com/in/delysha-b-98327322a/">Linkedin <i class="fa-brands fa-linkedin"></i></a>
+        </p>
+    
+</body>
+</html>

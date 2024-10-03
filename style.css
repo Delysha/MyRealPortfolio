@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #1F211E;
+    color: fff;
+}
+
+h1{
+    color: #F2F2F0;
+}
+
+#Header{
+    width: 100%;
+    height: 100vh;
+    background: url(Images/4bfdbcb96f17d85ff74f523870d1c8fe.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Logo a:visited{
+    text-decoration: none;
+    color: #F2F2F0;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #F2F2F0;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #594B39;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.header-text{
+    margin: 20%;
+    font-size: 30px;
+    color: #F2F2F0;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color:  hsl(212, 49%, 63%);
+}
+
+.header-text-animatingjob span{
+    position: relative;
+}
+
+.header-text-animatingjob span::before{
+    content: "Allround Devloper";
+    color: #F2F2F0;
+    animation: words 20s infinite;
+}
+
+.header-text-animatingjob span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #1e1e21;
+    border-left: 3px solid hsl(212, 49%, 63%);
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid hsl(212, 49%, 63%);
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Unreal Engine Developer";
+    }
+    21%, 40%{
+        content: "Unity Developer";
+    }
+    41%, 60%{
+        content: "Unity/Unreal game designer";
+    }
+    61%, 80%{
+        content: "HTML/Css Developer";
+    }
+    81%, 100%{
+        content: "Allround development";
+    }
+}
+
+@keyframes typing{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 8px);
+    }
+}
+
+/*-----About Me-----*/
+
+#AboutMe{
+    padding: 80px 0;
+    color: #F2F2F0;
+}
+.Row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.About-Col-1{
+    flex-basis: 35%;
+}
+.About-Col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.About-Col-2{
+    flex-basis: 60%;
+}
+.Sub-Title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #F2F2F0;
+}
+
+.Sub-Title span{
+    color: hsl(212, 49%, 63%);
+}
+
+.SeeMoreBlog{
+    display: block;
+    margin: 30px auto;
+    width: fit-content;
+    border: 1px solid hsl(212, 28%, 36%);
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #F2F2F0;
+    transition: background 0.5s;
+}
+.SeeMoreBlog:hover{
+    background: hsl(212, 28%, 36%);
+}
+
+.Tab-Titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.Tab-Links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.Tab-Links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: hsl(212, 28%, 36%);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.Tab-Links.Active-Link::after{
+    width: 50%;
+}
+
+.Tab-Contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.Tab-Contents ul li span{
+    color: hsl(212, 49%, 63%);
+    font-size: 14px;
+}
+.Tab-Contents{
+    display: none;
+}
+.Tab-Contents.Active-Tab{
+    display: block;
+}
+
+/*-----Projects-----*/
+
+#Projects{
+    padding: 50px 0;
+}
+
+.BAMbg{
+    background-color: hsl(290, 86%, 83%);
+}
+
+.Work-List{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.Work{
+    border-radius: 60px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+}
+.Work img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+
+.Layer{
+    color: #F2F2F0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #635B5A);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.Layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.Layer a{
+    margin-top: 20px;
+    color: hsl(212, 49%, 63%);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #F2F2F0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.Work:hover img{
+    transform: scale(1.1);
+}
+.Work:hover .Layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid hsl(212, 28%, 36%);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #F2F2F0;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: hsl(212, 49%, 63%);
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    color: #F2F2F0;
+    background: hsl(212, 49%, 63%);
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+footer p{
+    color: #F2F2F0;
+}
+
+.CopyRight{
+    color: #F2F2F0;
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 1.5rem;  /* Smaller font size for headers */
+        padding: 10px;  /* Adjust padding to fit smaller screens */
+    }
+
+    img {
+        max-width: 100%;  /* Images will scale down to fit the screen */
+        height: auto;  /* Maintain aspect ratio */
+    }
+    
+}

@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #1F211E;
+    color: fff;
+}
+
+#Header{
+    width: 100%;
+    height: 60px;
+    background-color:hsl(212, 49%, 63%);
+    ;
+}
+
+.Container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Logo a:visited{
+    text-decoration: none;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #F2F2F0;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #594B39;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+#Projects{
+    padding: 50px 0;
+}
+
+.BAMbg{
+background-color: #6CC5D9;
+}
+
+.CV{
+    padding: 30px;
+}
+
+.Work-List{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 25px;
+    margin: 25px;
+}
+
+.Work{
+    border-radius: 60px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.Work img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+
+.Layer{
+    color: white;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #635B5A);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.Layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.Layer a{
+    margin-top: 20px;
+    color: hsl(212, 49%, 63%);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.Work:hover img{
+    transform: scale(1.1);
+}
+.Work:hover .Layer{
+    height: 100%;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    color: #F2F2F0;
+    background: hsl(212, 49%, 63%);
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+footer p{
+    color: #F2F2F0;
+}
